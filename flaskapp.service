@@ -1,0 +1,9 @@
+[Unit]
+Description=Flask APOD
+After=multi-user.target
+[Service]
+Type=idle
+ExecStart=/home/ec2-user/flaskapp/venv/bin/python3 /home/ec2-user/flaskapp/app.py
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
